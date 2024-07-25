@@ -8,13 +8,15 @@ class HomePage extends StatelessWidget {
     int tim = 111130;
     String place = "Arey useless";
     return Scaffold(
+      backgroundColor: Colors.amber,
       appBar: AppBar(
-        title: Text("Test App"),
+        backgroundColor: Colors.blueAccent,
+        title: const Text("Test App"),
       ),
       body: Center(
         child: Text("Say Hi to the world $tim $place"),
       ),
-      drawer: Drawer(),
+      drawer: const Drawer(),
     );
   }
 }

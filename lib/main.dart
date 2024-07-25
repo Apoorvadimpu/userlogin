@@ -8,10 +8,12 @@ import 'package:userlogin/screens/login_page.dart';
 // import 'package:flutter/services.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   // const MyApp({super.key});
 
   @override
@@ -21,14 +23,16 @@ class MyApp extends StatelessWidget {
         themeMode: ThemeMode.light,
         theme: ThemeData(primarySwatch: Colors.amber),
         darkTheme: ThemeData(
+          // fontFamily: GoogleFonts.aBeeZee().fontFamily,
           brightness: Brightness.dark,
           primarySwatch: Colors.indigo,
         ),
-        initialRoute: "/home",
+        initialRoute: "/login",
         routes: {
-          "/": (context) => LoginPage(),
-          "/login": (context) => LoginPage(),
-          "/home": (context) => HomePage(),
+          "/": (context) => const LoginPage(),
+          "/login": (context) => const LoginPage(),
+          "/home": (context) => const HomePage(),
+          // "/landing":(context) => const LandingPage(),
         });
   }
 }
